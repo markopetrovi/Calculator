@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>714</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Rimski brojevi</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="Rimski">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(143, 240, 164);</string>
+        </property>
+        <property name="text">
+         <string>Rimski brojevi</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="BigNumber">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::ClickFocus</enum>
+        </property>
+        <property name="text">
+         <string>Veliki brojevi</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="Rezultat">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Ovde će biti prikazan rezultat...</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QUnosBroja" name="UnosFirst">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QUnosBroja" name="UnosSecond">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="leftMargin">
+       <number>50</number>
+      </property>
+      <property name="rightMargin">
+       <number>50</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>120</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>12</number>
+      </property>
+      <item row="1" column="0">
+       <widget class="QMyButton" name="V">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>V</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QMyButton" name="X">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>X</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QMyButton" name="L">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>L</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QMyButton" name="M">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>M</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QMyButton" name="I">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>I</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QMyButton" name="sabiranje">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QMyButton" name="mnozenje">
+        <property name="text">
+         <string>*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QMyButton" name="C">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QMyButton" name="deljenje">
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QMyButton" name="D">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QMyButton" name="oduzimanje">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QUnosBroja" name="UnosFirst_vb">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QUnosBroja" name="UnosSecond_vb">
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_vb">
+      <property name="leftMargin">
+       <number>35</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>35</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>70</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>12</number>
+      </property>
+      <item row="1" column="2">
+       <widget class="QMyButton" name="devet">
+        <property name="text">
+         <string>9</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QMyButton" name="sest">
+        <property name="text">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QMyButton" name="osam">
+        <property name="text">
+         <string>8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QMyButton" name="pet">
+        <property name="text">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QMyButton" name="dva">
+        <property name="text">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QMyButton" name="mnozenje_vb">
+        <property name="text">
+         <string>*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QMyButton" name="nula">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QMyButton" name="jedan">
+        <property name="text">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QMyButton" name="tri">
+        <property name="text">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QMyButton" name="coma">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QMyButton" name="sabiranje_vb">
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QMyButton" name="cetiri">
+        <property name="text">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QMyButton" name="oduzimanje_vb">
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QMyButton" name="sedam">
+        <property name="text">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QMyButton" name="deljenje_vb">
+        <property name="text">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLineEdit" name="precision">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QLabel" name="label">
+        <property name="frameShape">
+         <enum>QFrame::Panel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <property name="text">
+         <string>Result Max Digit Number:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QUnosBroja</class>
+   <extends>QTextEdit</extends>
+   <header>mainwindow.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QMyButton</class>
+   <extends>QPushButton</extends>
+   <header>mainwindow.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
