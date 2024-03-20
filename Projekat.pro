@@ -1,6 +1,8 @@
 QT       += core gui
 
-LIBS += -lmpfr -lgmp
+INCLUDEPATH += "C:\Boost\include\boost-1_84"
+INCLUDEPATH += "C:\include"
+LIBS += -LC:\bin -llibgmp-13
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

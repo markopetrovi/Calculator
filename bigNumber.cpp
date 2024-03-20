@@ -7,10 +7,23 @@
 
 using namespace boost::multiprecision;
 
+unsigned int max(unsigned int a, unsigned int b, unsigned int c)
+{
+    unsigned int max;
+    if (a > b)
+        max = a;
+    else
+        max = b;
+    if (c > max)
+        max = c;
+    return max;
+}
+
 #define CreateMethod(name, opsign)                                                      \
 QString name(const QString &prvi, const QString &drugi, unsigned int precision)         \
 {                                                                                       \
     try {                                                                               \
+        mpf_float::default_precision(max(prvi.size(), drugi.size(), precision));        \
         mpf_float a;                                                                    \
         mpf_float b;                                                                    \
         mpf_float res;                                                                  \
